@@ -42,16 +42,7 @@ function displayTime() {
   console.log(time, alarmTime, time == alarmTime)
   if (time == alarmTime) {
     sound.play();
-      // clear the alarm
-    hourInput.disabled = false;
-    minuteInput.disabled = false;
-    secondInput.disabled = false;
-    amPmInput.disabled = false;
-    alarm = "00:00:00 AM";
-    submitButton.textContent = "Set Alarm";
-    submitButton.className = "button is-info";
-    
-    isAlarmActive = false;
+    sound.loop = true
   }
   setTimeout(displayTime, 1000);
 }
